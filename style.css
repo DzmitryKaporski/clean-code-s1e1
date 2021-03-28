@@ -1,9 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 /* Basic Style */
-body {
+.page {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
-  margin: 0;
 }
 
 .preview {
@@ -23,7 +27,7 @@ body {
 
 @media (max-width:768px) {
   .preview {
-  text-align: center;
+    text-align: center;
   }
 }
 
@@ -160,7 +164,7 @@ button.delete img:hover {
 }
 
 /* Completed */
-ul#completed-tasks label {
+#completed-tasks label {
   text-decoration: line-through color: #888;
 }
 
