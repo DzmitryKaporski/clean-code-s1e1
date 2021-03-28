@@ -90,7 +90,7 @@ var editTask = function () {
   } else {
     editInput.value = label.innerText;
     editBtn.innerText = "Save";
-  }
+  };
 
   //toggle .editmode on the parent.
   listItem.classList.toggle("edit-mode");
@@ -116,7 +116,7 @@ var taskCompleted = function () {
   completedTasksHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskIncomplete);
 
-}
+};
 
 var taskIncomplete = function () {
   console.log("Incomplete Task...");
@@ -126,14 +126,13 @@ var taskIncomplete = function () {
   var listItem = this.parentNode;
   incompleteTaskHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskCompleted);
-}
+};
 
 var ajaxRequest = function () {
   console.log("AJAX Request");
-}
+};
 
 //The glue to hold it all together.
-
 //Set the click handler to the addTask function.
 addButton.onclick = addTask;
 addButton.addEventListener("click", addTask);
@@ -152,21 +151,20 @@ var bindTaskEvents = function (taskListItem, checkBoxEventHandler) {
   deleteButton.onclick = deleteTask;
   //Bind taskCompleted to checkBoxEventHandler.
   checkBox.onchange = checkBoxEventHandler;
-}
+};
 
 //cycle over incompleteTaskHolder ul list items
 //for each list item
 for (var i = 0; i < incompleteTaskHolder.children.length; i++) {
-
   //bind events to list items chldren(tasksCompleted)
   bindTaskEvents(incompleteTaskHolder.children[i], taskCompleted);
-}
+};
 
 //cycle over completedTasksHolder ul list items
 for (var i = 0; i < completedTasksHolder.children.length; i++) {
   //bind events to list items chldren(tasksIncompleted)
   bindTaskEvents(completedTasksHolder.children[i], taskIncomplete);
-}
+};
 
 // Issues with usability don't get seen until they are in front of a human tester.
 
