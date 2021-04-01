@@ -165,7 +165,7 @@ li>.main__button.main__delete:hover {
 
 /* Completed */
 #completed-tasks label {
-  text-decoration: line-through;
+  text-decoration: line-through red;
   color: #888;
 }
 
